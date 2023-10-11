@@ -2,13 +2,13 @@
 
 # validate two parameters are provided
 if [ $# -ne 2 ]; then
-    echo "Error: $0 <number_of_rows> <number_of_columns>"
+    echo "Invalid input"
     exit 1
 fi
 
 # validate if two arguments are positive
 if ! [[ $1 =~ ^[1-9][0-9]*$ ]] || ! [[ $2 =~ ^[1-9][0-9]*$ ]]; then
-    echo "Error: Both arguments should be positive integers."
+    echo "Input must be greater than 0"
     exit 1
 fi
 
