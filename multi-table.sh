@@ -15,15 +15,14 @@ fi
 rows=$1
 columns=$2
 
+# certain gap
 max_length=2
 
 # Print the multiplication results
 for ((i=1; i<=rows; i++)); do
     for ((j=1; j<=columns; j++)); do
         result=$((i * j))
-        # echo -n "$i * $j = $result  "
 	printf "%d * %d = %-${max_length}s   " "$i" "$j" "$result"
-
     done    
     echo " "
 done
